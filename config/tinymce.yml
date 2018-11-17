@@ -6,7 +6,7 @@ theme_advanced_buttons3_add:
   - fullscreen
 menubar: false
 toolbar:
-  [ undo redo | bold italic | styleselect | alignleft aligncenter alignright | fullscreen ]
+  [ undo redo | styleselect | alignleft aligncenter alignright | fullscreen ]
 language:
   - ja
 plugins:

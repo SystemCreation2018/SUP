@@ -1,9 +1,13 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.separate-line {
+  border: 0;
+  border-top: 1px solid;
+}
 
 .top-title {
-  font-size: 100px;
+  font-size: 75px;
   text-align: center;
   font-family: "HG行書体", "HGP行書体";
 
@@ -53,4 +57,16 @@
     color:black;
     background-color:white;
   }
+}
+
+#article_title,
+#comment_body {
+  width: 100%;
+}
+
+.field .field_with_errors {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #ff2200;
+  background: none;
 }

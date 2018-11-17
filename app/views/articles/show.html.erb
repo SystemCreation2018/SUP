@@ -1,17 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>タイトル:</strong>
   <%= @article.title %>
 </p>
 
+<hr class=separate-line>
+
 <p>
-  <strong>説明:</strong>
   <%= @article.content.html_safe %>
 </p>
 
+<hr class=separate-line>
+
 <p>
-  <strong>コメント:</strong>
   <% @article.comments.select{ |c| c.persisted? }.each_with_index do |comment, idx| %>
       <p>
         <%= idx+1 %>:<%= comment.created_at %> <br>
@@ -34,5 +35,9 @@
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
 
+<hr class=separate-line>
+
+<font size=3>
+<div align=left>
 <%= link_to '編集', edit_article_path(@article) %> |
 <%= link_to '戻る', articles_path %>

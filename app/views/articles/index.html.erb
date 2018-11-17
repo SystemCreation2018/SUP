@@ -4,11 +4,13 @@
   <span class="shima">島</span><span class="dai">大</span><span class="hyaku">百</span><span class="ka">科</span>
 </h1>
 
-<table>
+<br>
+<br>
+
+<table align=center>
   <thead>
     <tr>
-      <th>タイトル</th>
-      <th>内容</th>
+      <th>＊新着記事＊</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +19,6 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= article.content.html_safe %></td>
         <td><%= link_to '詳細', article %></td>
         <td><%= link_to '編集', edit_article_path(article) %></td>
       </tr>
@@ -27,4 +28,6 @@
 
 <br>
 
+<div align=center> 
 <%= link_to '新規作成', new_article_path %>
+</div>
