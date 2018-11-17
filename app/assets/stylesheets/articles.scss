@@ -5,3 +5,68 @@
   border: 0;
   border-top: 1px solid;
 }
+
+.top-title {
+  font-size: 75px;
+  text-align: center;
+  font-family: "HG行書体", "HGP行書体";
+
+  span {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+.shima {
+  color:black;
+  background-color:white;
+
+  &:hover {
+    color:white;
+    background-color:black;
+  }
+}
+
+.dai {
+  color:white;
+  background-color:gray;
+
+  &:hover {
+    color:gray;
+    background-color:white;
+  }
+}
+
+.hyaku {
+  color:black;
+  background-color:silver;
+
+  &:hover {
+    color:silver;
+    background-color:black;
+  }
+}
+
+.ka {
+  color:white;
+  background-color:black;
+
+  &:hover {
+    color:black;
+    background-color:white;
+  }
+}
+
+#article_title,
+#comment_body {
+  width: 100%;
+}
+
+.field .field_with_errors {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #ff2200;
+  background: none;
+}
