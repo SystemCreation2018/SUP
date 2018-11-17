@@ -18,7 +18,8 @@
 
   <div class="field">
     <%= form.label :content, '内容' %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
+    <%= tinymce %>
   </div>
 
   <div class="actions">

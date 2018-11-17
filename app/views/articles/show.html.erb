@@ -7,8 +7,32 @@
 
 <p>
   <strong>説明:</strong>
-  <%= @article.content %>
+  <%= @article.content.html_safe %>
 </p>
+
+<p>
+  <strong>Comments:</strong>
+  <% @article.comments.select{ |c| c.persisted? }.each_with_index do |comment, idx| %>
+      <p>
+        <%= idx+1 %>:<%= comment.created_at %> <br>
+        <%= comment.body %> <br>
+        <%= link_to "削除", comment_path(comment), method: :delete %>
+      </p>
+  <% end %>
+</p>
+
+<%= form_for([@article, @comment]) do |f| %>
+  <% if @comment.errors.any? %>
+    <% @comment.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_area :body, placeholder: "Send comment...", name: "comment[body]" %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
 
 <%= link_to '編集', edit_article_path(@article) %> |
 <%= link_to '戻る', articles_path %>
