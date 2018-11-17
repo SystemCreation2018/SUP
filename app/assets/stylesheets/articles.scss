@@ -1,3 +1,56 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-title {
+  font-size: 100px;
+  text-align: center;
+  font-family: "HG行書体", "HGP行書体";
+
+  span {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+.shima {
+  color:black;
+  background-color:white;
+
+  &:hover {
+    color:white;
+    background-color:black;
+  }
+}
+
+.dai {
+  color:white;
+  background-color:gray;
+
+  &:hover {
+    color:gray;
+    background-color:white;
+  }
+}
+
+.hyaku {
+  color:black;
+  background-color:silver;
+
+  &:hover {
+    color:silver;
+    background-color:black;
+  }
+}
+
+.ka {
+  color:white;
+  background-color:black;
+
+  &:hover {
+    color:black;
+    background-color:white;
+  }
+}
