@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Comments:</strong>
+  <strong>コメント:</strong>
   <% @article.comments.select{ |c| c.persisted? }.each_with_index do |comment, idx| %>
       <p>
         <%= idx+1 %>:<%= comment.created_at %> <br>

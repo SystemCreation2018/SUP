@@ -1,7 +1,12 @@
 ja:
   activerecord:
     models:
+      article: 記事
       comment: コメント
     attributes:
+      article:
+        title: タイトル
+        content: 記事本文
       comment:
         body: コメント本文
+       
