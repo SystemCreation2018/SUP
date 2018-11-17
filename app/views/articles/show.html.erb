@@ -19,15 +19,17 @@
   </div>
 </p>
 
-<hr style="border:0;border-top:1px solid">
+<hr class=separate-line>
 
+<div align=left>
 <p>
-  <strong>説明:</strong>
   <%= @article.content.html_safe %>
 </p>
+  </div>
+
+<hr class=separate-line>
 
 <p>
-  <strong>コメント:</strong>
   <% @article.comments.select{ |c| c.persisted? }.each_with_index do |comment, idx| %>
       <p>
         <%= idx+1 %>:<%= comment.created_at %> <br>
@@ -45,13 +47,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_area :body, placeholder: "Send comment...", name: "comment[body]" %>
+    <%= f.text_area :body, placeholder: "コメントを入力して下さい。", name: "comment[body]" %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= f.submit "投稿", class: "btn btn-primary" %>
 <% end %>
 
+<hr class=separate-line>
+
+<font size=3>
+<div align=right>
 <%= link_to '編集', edit_article_path(@article) %> |
 <%= link_to '戻る', articles_path %>
   </font>
   </div>
+</div>
 </div>

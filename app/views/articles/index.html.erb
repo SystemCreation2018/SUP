@@ -19,7 +19,6 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= article.content.html_safe %></td>
         <td><%= link_to '詳細', article %></td>
         <td><%= link_to '編集', edit_article_path(article) %></td>
       </tr>
